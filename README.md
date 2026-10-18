@@ -1,7 +1,7 @@
 # RimRunnerUtah
 
 Unofficial Utah HS boys basketball ratings. Not affiliated with the UHSAA or MaxPreps.
-Status: **HELD - waiting for hosting.** Planned home: https://rimrunnerutah.web.app/ (Firebase Hosting). The Firebase project could not be
+Status: **LIVE** at https://rimrunnerutah.web.app/ (Firebase Hosting, live since 2026-10-18). Backup copy: GitHub Pages.
 created yet (Google project quota on the hosting account) and Cloudflare Pages is at its project limit. Working preview: this repo's GitHub Pages copy.
 Until the site's Firebase project exists, accounts, picks and follows save only in the visitor's browser.
 
