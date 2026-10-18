@@ -10,7 +10,7 @@
   <link rel="icon" href="data:,">
     <meta property="og:title" content="RimRunnerUtah">
   <meta property="og:description" content="Unofficial Utah HS boys basketball rankings, predictions, and weekly picks.">
-  <meta property="og:url" content="https://joshua-kpg.github.io/RimRunnerUtah/">
+  <meta property="og:url" content="https://rimrunnerutah.web.app/">
   <meta name="description" content="RimRunnerUtah: unofficial Utah high school boys basketball rankings, predictions, and weekly picks. Not affiliated with the UHSAA or MaxPreps." />
   <style>
     :root {
@@ -1948,14 +1948,13 @@ const DATA = {
 const LAST_YEAR = {}; // intentionally empty (user decision): 2025-26 game lists are not embedded; raw data stays on the box
 
 
-/* FIREBASE — RimRunnerUtah needs its OWN Firebase project (do not reuse Michigan's "mitten-ratings").
-   TODO after the user creates it: paste the web config (Firebase console → Project settings → Your apps).
-   While apiKey/projectId are blank, cloudOn() is false: accounts, picks and follows stay device-only
-   (saved in this browser) and nothing is sent anywhere. */
+/* FIREBASE — RimRunnerUtah's own project "rimrunnerutah" (not Michigan's "mitten-ratings").
+   Web config is public by design; access is controlled by Firebase Auth + Firestore rules
+   (rules source: repo firebase/firestore.rules). */
 const FIREBASE_CONFIG = {
-  apiKey: "",            // TODO: RimRunnerUtah web apiKey
-  authDomain: "",        // TODO: e.g. "<new-project-id>.firebaseapp.com"
-  projectId: ""          // TODO: e.g. "<new-project-id>"
+  apiKey: "AIzaSyBkzz_ejMJ81flAtyZ2fUpG32xNeaY-Gws",
+  authDomain: "rimrunnerutah.firebaseapp.com",
+  projectId: "rimrunnerutah"
 };
 let fbAuth = null;
 let fbDb = null;
@@ -3530,7 +3529,7 @@ function followBar() {
 }
 
 function siteOrigin() {
-  return (location.origin && location.origin !== "null") ? location.origin + location.pathname : "https://joshua-kpg.github.io/RimRunnerUtah/";
+  return (location.origin && location.origin !== "null") ? location.origin + location.pathname : "https://rimrunnerutah.web.app/";
 }
 function shareMatchLink() {
   return siteOrigin() + "?page=matchup&a=" + encodeURIComponent(matchA) + "&b=" + encodeURIComponent(matchB) + "&site=" + encodeURIComponent(matchSite);
@@ -4016,7 +4015,7 @@ function profilePage(name) {
 function accountPage() {
   const u = currentUser();
   if (u) return profilePage(u.user);
-  return `<section class="hero"><h2>Log in</h2><p>${pendingPick ? "Log in to save your Game of the Week pick. Then you’ll finish the other nine." : "Create a name and password. Accounts save in this browser. Cross-device sync turns on once the site’s Firebase project is connected."}</p></section>
+  return `<section class="hero"><h2>Log in</h2><p>${pendingPick ? "Log in to save your Game of the Week pick. Then you’ll finish the other nine." : "Create a name and password. Your account, picks and follows sync across your devices."}</p></section>
     <section class="card" style="margin-bottom:14px">
       <h3>Log in</h3>
       <label style="color:var(--muted);font-size:.8rem">Name</label>
@@ -4131,7 +4130,7 @@ function howPage() {
       <p><strong>SOS</strong> = average preseason Elo of the opponents you played in 2025-26. <strong>QW</strong> = 2025-26 wins over a team rated higher going into the game (second pass). <strong>Bad losses</strong> = losses to a team rated lower going in. <strong>MPR*</strong> = 0.25 × win % + 0.50 × opponents' win % + 0.25 × opponents' opponents' win %, 2025-26, in-list games only. It's only for reference; the UHSAA RPI used for state tournament seeding is its own formula, not this.</p>
       <p><strong>Big game:</strong> 85% how highly the two teams rank (average statewide rank) + 15% how close the spread is. Closeness: spread 0–5 = full, 5–10 = 0.65, 10–15 = 0.35, over 15 = 0.1. A pair shows up only once per week.</p>
       <p><strong>Conference champs:</strong> Best record in conference games only. A share of first counts as a title. Every pair is treated as home and home, using the same win chance as the matchup calculator, over 20,000 simulated seasons. Conferences are the UHSAA regions (for example 2A Region 16, 2A Region 18, 4A Region 11, 5A Region 4, 5A Region 6, 5A Region 7, 1A Region 19), with each school in the region it plays boys basketball in for 2026-27. Independents are not in any conference. Conferences with only one of our teams are left out.</p>
-      <p><strong>Picks:</strong> Each week has 10 games. Pick who covers the listed spread. Correct cover = 1 point. Push = no point. Not betting. No coins, no cash, no prizes. Accounts and picks save in this browser. They sync across devices only after the site's Firebase project is connected.</p>
+      <p><strong>Picks:</strong> Each week has 10 games. Pick who covers the listed spread. Correct cover = 1 point. Push = no point. Not betting. No coins, no cash, no prizes. Log in and your picks and follows sync across your devices.</p>
       <p><strong>Data:</strong> Teams, schedules and results come from MaxPreps. Classes (6A, 5A, 4A, 3A, 2A, 1A) and regions follow the UHSAA's 2026-27 boys basketball teams list (2025-27 alignment, adopted Dec 19, 2024, with its higher-classification-by-sport placements). Other = Utah schools outside the UHSAA list that played at least 8 UHSAA teams in 2025-26. Games before the UHSAA first contest date (Tue Nov 17, 2026) and on UHSAA moratorium days (Nov 26-29, Dec 21-25, Jan 1) are left out. The 2026-27 schedule shows only games between two of these teams, deduplicated to one game per pair per date. Out-of-state and unlisted opponents are not shown and do not move ratings, but their results do count in each W-L record. Scores update nightly (about 2:30 am and 9 am Mountain time) from MaxPreps finals; forfeits count by the posted win/loss.</p>
       <p>Unofficial. Not affiliated with the UHSAA or MaxPreps. Postseason seeding is not affected by this site.</p>
     </section>`;
