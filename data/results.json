@@ -130,6 +130,19 @@
    "source": "scores-page",
    "state": "applied",
    "winner": "away"
+  },
+  "d0892ec2-fda4-42c5-99a5-e6d1393eaf69": {
+   "awayMp": "243e377b-415d-4177-a49b-68b16a1f5439",
+   "awayScore": 45,
+   "date": "2026-11-17",
+   "forfeit": false,
+   "gameId": "ut26-0002",
+   "homeMp": "c3396db4-d357-45f0-9c41-83763f781b7c",
+   "homeScore": 80,
+   "neutral": null,
+   "source": "scores-page",
+   "state": "applied",
+   "winner": "home"
   }
  }
 }
