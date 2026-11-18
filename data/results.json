@@ -1,4 +1,135 @@
 {
  "about": "RimRunnerUtah 2026-27 finals ledger, written by scripts/update_scores.py. Keyed by MaxPreps contest id. homeMp/awayMp are MaxPreps team ids. state: applied | unlisted (one team not in our list; counts for records only) | pending (final between listed teams with no scheduled game yet; awaiting team-page check) | ignored.",
- "finals": {}
+ "finals": {
+  "1e9d2f39-1567-4cc6-8493-a04a9dfb2c16": {
+   "awayMp": "739aee80-c9df-4882-854d-b8d00635ddb2",
+   "awayScore": 81,
+   "date": "2026-11-17",
+   "forfeit": false,
+   "gameId": "ut26-0001",
+   "homeMp": "e7ff3346-5263-4c08-94fe-257025657a4d",
+   "homeScore": 30,
+   "neutral": null,
+   "source": "scores-page",
+   "state": "applied",
+   "winner": "away"
+  },
+  "2a58770c-6a80-4396-b422-3761399f7470": {
+   "awayMp": "75d61ca1-136e-4ef3-ae5b-a4fa959123f0",
+   "awayScore": 41,
+   "date": "2026-11-17",
+   "forfeit": false,
+   "gameId": "ut26-0005",
+   "homeMp": "7abb78b4-7ace-4587-9417-8fab69f53108",
+   "homeScore": 60,
+   "neutral": null,
+   "source": "scores-page",
+   "state": "applied",
+   "winner": "home"
+  },
+  "3a607d28-21ea-4b02-9e71-0550ee258b11": {
+   "awayMp": "abf92ed8-5bdd-4f40-81be-0c8f39357cff",
+   "awayScore": 51,
+   "date": "2026-11-17",
+   "forfeit": false,
+   "gameId": "ut26-0006",
+   "homeMp": "7bfd7955-5184-4b6c-9dfe-ef2d1c105ac6",
+   "homeScore": 92,
+   "neutral": null,
+   "source": "scores-page",
+   "state": "applied",
+   "winner": "home"
+  },
+  "4683ec0c-05b8-4ceb-9a23-41216736561a": {
+   "awayMp": "e6673388-704d-4112-94ab-cbbdf78c1b86",
+   "awayScore": 89,
+   "date": "2026-11-17",
+   "forfeit": false,
+   "gameId": "ut26-0007",
+   "homeMp": "ee15b0c1-0390-48e1-8b7e-89cd9c34f5f7",
+   "homeScore": 51,
+   "neutral": null,
+   "source": "scores-page",
+   "state": "applied",
+   "winner": "away"
+  },
+  "858b235c-8675-4e90-aac3-b2dba2e7b977": {
+   "awayMp": "60fbb050-1b2d-40cb-8435-2bf84bded23c",
+   "awayScore": 72,
+   "date": "2026-11-17",
+   "forfeit": false,
+   "gameId": "ut26-0003",
+   "homeMp": "ab51e321-a305-4495-b1f7-0cbe0f091e2c",
+   "homeScore": 28,
+   "neutral": null,
+   "source": "scores-page",
+   "state": "applied",
+   "winner": "away"
+  },
+  "8738ae06-abf5-4827-a3f0-f6f40d44752e": {
+   "awayMp": "de4046ad-3949-44dc-9d9f-81abda07e978",
+   "awayScore": 46,
+   "date": "2026-11-17",
+   "forfeit": false,
+   "gameId": "ut26-0011",
+   "homeMp": "d1b51cea-e24a-4de9-aa09-1b7cbc7b4350",
+   "homeScore": 61,
+   "neutral": null,
+   "source": "scores-page",
+   "state": "applied",
+   "winner": "home"
+  },
+  "8d0d723d-1d58-47ff-b426-76a79918a111": {
+   "awayMp": "e5d89178-b6f4-4e0c-914a-bb366142b8bf",
+   "awayScore": 52,
+   "date": "2026-11-17",
+   "forfeit": false,
+   "gameId": "ut26-0012",
+   "homeMp": "e22a3e85-6d2a-48ca-8f46-515299c7dc14",
+   "homeScore": 78,
+   "neutral": null,
+   "source": "scores-page",
+   "state": "applied",
+   "winner": "home"
+  },
+  "963f6520-377f-41cf-be61-271e5c784ec0": {
+   "awayMp": "74685b10-dc86-4f65-bded-2176d43f47d5",
+   "awayScore": 78,
+   "date": "2026-11-17",
+   "forfeit": false,
+   "gameId": "ut26-0013",
+   "homeMp": "2b3e3c8a-e07e-4521-8cac-15db33c5c56e",
+   "homeScore": 16,
+   "neutral": null,
+   "source": "scores-page",
+   "state": "applied",
+   "winner": "away"
+  },
+  "9e66c812-f3ef-4a1e-a189-be9d344d4c55": {
+   "awayMp": "16c5e87b-df7f-4236-b56f-9d379531c641",
+   "awayScore": 58,
+   "date": "2026-11-17",
+   "forfeit": false,
+   "gameId": "ut26-0014",
+   "homeMp": "5994fdb6-3a74-4c51-9d44-0eeeb42d4ee1",
+   "homeScore": 70,
+   "neutral": null,
+   "source": "scores-page",
+   "state": "applied",
+   "winner": "home"
+  },
+  "c7edf798-6702-4515-81fb-a9fcc3f67155": {
+   "awayMp": "cf9c8489-4a49-4a99-a655-3fda97e61cac",
+   "awayScore": 56,
+   "date": "2026-11-17",
+   "forfeit": false,
+   "gameId": "ut26-0015",
+   "homeMp": "99b030a2-1c41-4a57-b264-14facf223f56",
+   "homeScore": 28,
+   "neutral": null,
+   "source": "scores-page",
+   "state": "applied",
+   "winner": "away"
+  }
+ }
 }
